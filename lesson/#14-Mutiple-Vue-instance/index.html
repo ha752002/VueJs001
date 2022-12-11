@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue js Tutorials</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id="vue-app">
+        <h1>Mutiple Vue instances</h1>
+
+        <div id="vue-app-one">
+            <h2>{{ title}}</h2>
+            <p>{{greet}}</p>
+        </div>
+
+        <div id="vue-app-two">
+            <h2>{{ title}}</h2>
+            <p>{{greet}}</p>
+            <button v-on:click="changeTitel"> Change app one title </button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

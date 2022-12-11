@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue js Tutorials</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="vue-app">
+        <h1>Dynamic Css Classes</h1>
+        <h2>Example 1</h2>
+        <div v-on:click="availabel = !availabel" v-bind:class="{availabel:availabel}">
+            <span>hihi</span>
+        </div>
+        <h2>Example 2</h2>
+        <div v-hind:class="compClasses">
+            <span>hihi2</span>
+            <button v-on:click="nearby != nearby">Toggle nearby</button>
+            <button v-on:click="availabel = !availabel"  >Toggle avaulabel</button>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
