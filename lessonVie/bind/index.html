@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJs</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="obj">
+        <p v-once> {{ noidung }} - {{ showPost() }}</p>
+        <a v-bind:href="link">My Facebook</a>
+    </div>
+    <script>
+        new Vue({
+            el: '#obj',
+
+            data: {
+                noidung: 'Ha dayyyy',
+                link: 'https://www.facebook.com/profile.php?id=100088234994540'
+            },
+
+            methods: {
+                sayHello: function () {
+                    document.write("say Hello ");
+                },
+
+                showPost: function () {
+                    this.noidung = 'Noi dung vua cap nhat';
+                    return this.noidung;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

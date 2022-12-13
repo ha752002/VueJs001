@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJs</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="obj">
+        <div v-on:mousemove="tinhToaDo">
+            <h1>Bam nut de tang gia tri</h1>
+            <button v-on:click="tangGiaTri">An di</button>
+            <p>Gia tri: {{ dem }}</p>
+            <p v-on:mousemove="tinhToaDo">Toa do cua chuot: {{ x }} / {{ y }}</p>
+        </div>
+    </div>
+    <script>
+        new Vue({
+            el: '#obj',
+
+            data: {
+                dem: 0,
+                x: 0,
+                y: 0
+            },
+
+            methods: {
+                tangGiaTri: function () {
+                    this.dem++;
+                },
+                tinhToaDo: function (event) {
+                    this.x = event.clientX;
+                    this.y = event.clientY;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
