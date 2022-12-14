@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 hhihi ahahahahhaa
+=======
+hello
+>>>>>>> issue3
